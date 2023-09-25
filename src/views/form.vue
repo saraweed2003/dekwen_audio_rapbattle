@@ -2,26 +2,49 @@
   <div class="overflow-y-auto h-full">
     <!-- component -->
     <div
-      class="min-h-screen p-6 bg-black/50 flex items-center justify-center font-Kanit"
+      class="min-h-screen p-[10px] bg-black flex items-center justify-center font-Kanit"
     >
       <div class="container max-w-screen-lg mx-auto">
         <div>
-         
-
-          <div class="bg-black/80 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+          <div class="bg-gray-900 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
               <div class="text-white">
-                 <h2 class="font-semibold text-xl text-white ">
-            Dekwen Audio Rap Battle
-          </h2>
-          <p class="text-gray-200 mb-6 ">แบบฟอร์มกรอกข้อมูล</p>
-                <p class="font-bold text-sm">Personal Details</p>
-                <p>กติกา</p>
+                <h2 class="font-semibold text-xl text-white">
+                  Dekwen Audio Rap Battle
+                </h2>
+                <p class="text-gray-200 mb-6">แบบฟอร์มกรอกข้อมูล</p>
+                <!-- <p class="font-bold text-sm">Personal Details</p> -->
 
                 <div class="flex items-center justify-center">
                   <img src="src\assets\DEKWEN.png" class="image" />
                 </div>
-                <p class="pb-[5px]">ติดต่อสอบถามเพิ่มเติม</p>
+
+                <h1>กติกา</h1>
+                <div>
+                  <p>
+                    1. ดาวน์โหลด Beat จากเว็บไซต์
+                    <a href="http://www.dekwen.beat.com" class="text-sky-300"
+                      >DEKWEN BEAT</a
+                    >
+                  </p>
+                  <p>2. ไม่จำกัดเนื้อหา ( ห้ามพาดพิงชาติ ศาสนา )</p>
+                  <p>3. อัดเสียง สามารถมิกซ์ได้</p>
+                  <p>
+                    4. ส่งข้อมูลมาที่เว็บไซต์
+                    <a href="http://www.dekwen.form.com" class="text-sky-300"
+                      >DEKWEN FORM</a
+                    >
+                  </p>
+
+                  <h3 class="pt-[10px]">
+                    รางวัลของผู้ชนะเลิศของแต่ละอันดับคือ
+                  </h3>
+                  <p>- อันดับ 1 จะได้รับ 3 beat</p>
+                  <p>- อันดับ 2 จะได้รับ 2 beat</p>
+                  <p>- อันดับ 3 จะได้รับ 1 beat</p>
+                </div>
+
+                <p class="pt-[20px] pb-[5px]">ติดต่อสอบถามเพิ่มเติม</p>
                 <a
                   href="https://www.facebook.com/profile.php?id=100095485360887"
                   class="text-green-600 text-[19px] hover:text-green-400"
@@ -34,21 +57,23 @@
                   class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5"
                 >
                   <div class="md:col-span-5">
-                    <label for="first_name" class="text-white">First Name</label>
+                    <label for="first_name" class="text-white"
+                      >First Name</label
+                    >
                     <input
                       type="text"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder="ชื่อ"
                       required
                     />
                   </div>
 
-                   <div class="md:col-span-5">
+                  <div class="md:col-span-5">
                     <label for="last_name" class="text-white">Last Name</label>
                     <input
                       type="text"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder="นามสกุล"
                       required
@@ -59,7 +84,7 @@
                     <label for="aka" class="text-white">AKA</label>
                     <input
                       type="text"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder="AKA"
                       required
@@ -70,7 +95,7 @@
                     <label for="age" class="text-white">Age</label>
                     <input
                       type="number"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder=""
                       required
@@ -81,14 +106,12 @@
                     <label for="email" class="text-white">Email</label>
                     <input
                       type="text"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder="email@domain.com"
                       required
                     />
                   </div>
-
-
 
                   <div class="md:col-span-5">
                     <label for="image" class="text-white">Image</label>
@@ -169,10 +192,12 @@
                   </div>
 
                   <div class="md:col-span-5">
-                    <label for="contact" class="text-white">Contact (ลิงค์ช่องทางติดต่อ)</label>
+                    <label for="contact" class="text-white"
+                      >Contact (ลิงค์ช่องทางติดต่อ)</label
+                    >
                     <input
                       type="text"
-                      class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                      class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder="www.facebook.com"
                       required
@@ -250,7 +275,7 @@ const closeAudioModal = () => {
 
 <style scoped>
 .image {
-  width: 300px; /* กำหนดความกว้างของรูป */
+  width: 200px; /* กำหนดความกว้างของรูป */
   height: auto; /* ให้ความสูงปรับตามสัดส่วนของรูป */
 }
 
