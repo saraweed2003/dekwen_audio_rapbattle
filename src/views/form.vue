@@ -92,9 +92,9 @@
                   </div>
 
                   <div class="md:col-span-2">
-                    <label for="age" class="text-white">Age</label>
+                    <label for="birthday" class="text-white">Birthday</label>
                     <input
-                      type="number"
+                      type="date"
                       class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
                       value=""
                       placeholder=""
@@ -192,8 +192,8 @@
                   </div>
 
                   <div class="md:col-span-5">
-                    <label for="contact" class="text-white"
-                      >Contact (ลิงค์ช่องทางติดต่อ)</label
+                    <label for="link_social" class="text-white"
+                      >Link social</label
                     >
                     <input
                       type="text"
