@@ -3,6 +3,19 @@
     class="min-h-screen p-[10px] bg-black flex items-center justify-center font-Kanit"
   >
     <div class="items-center justify-center bg-gray-900 rounded">
+      <!-- <p>
+        1. ดาวน์โหลด Beat ได้ที่นี่
+        <a href="http://www.dekwen.beat.com" class="text-sky-300"
+          >DEKWEN BEAT</a
+        >
+      </p>
+      <p>2. ไม่จำกัดเนื้อหา ( ห้ามพาดพิงชาติ ศาสนา )</p>
+      <p>3. อัดเสียง สามารถมิกซ์ได้</p> -->
+
+      <!-- <h3 class="pt-[10px]">รางวัลของผู้ชนะเลิศของแต่ละอันดับคือ</h3>
+      <p>- อันดับ 1 จะได้รับ 3 beat</p>
+      <p>- อันดับ 2 จะได้รับ 2 beat</p>
+      <p>- อันดับ 3 จะได้รับ 1 beat</p> -->
       <div class="py-[20px]">
         <div class="flex items-center justify-center">
           <img src="src\assets\DEKWEN.png" class="w-[150px] h-[150px]" />

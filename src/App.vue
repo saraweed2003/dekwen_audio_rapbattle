@@ -1,15 +1,16 @@
 <script setup></script>
 
 <template>
-  <div class="">
+  <div class="font-Kanit">
     <RouterView />
   </div>
 </template>
 
 <style>
 .bg {
-  background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzA2cHRoY3ZrOHFxZDA2enltc25zbzI4ZTQ1dDJ4amtkMGUydXVwOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/B8lrRCcd4gpcFgdV0W/giphy.gif");
+  background-image: url("src\assets\Background.jpg");
   position: fixed;
+  /* background-image: ("src\assets\Background.jpg"); */
 
   width: 100%;
   height: 100%;
