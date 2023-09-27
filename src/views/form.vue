@@ -1,10 +1,10 @@
 <template>
   <div
-    class="min-h-screen p-[10px] flex items-center justify-center font-Kanit bg-black"
+    class="min-h-screen p-[10px] flex items-center justify-center font-Kanit bg-black/80"
   >
     <div class="container max-w-screen-lg mx-auto">
       <div
-        class="bg-gray-900 rounded shadow-lg p-4 px-4 md:p-8 mb-6 overflow-y-auto h-auto max-h-[660px]"
+        class="bg-black/80 rounded-lg shadow-lg p-4 px-4 md:p-8 mb-6 overflow-y-auto h-auto max-h-[660px]"
       >
         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
           <div class="text-white">
@@ -39,9 +39,9 @@
             <p class="pt-[20px] pb-[5px]">ติดต่อสอบถามเพิ่มเติม</p>
             <a
               href="https://www.facebook.com/profile.php?id=100095485360887"
-              class="text-green-600 text-[19px] hover:text-green-400"
+              class="text-blue-600 text-[19px] hover:text-blue-400"
               target="_blank"
-              >DekWen Audio battle</a
+              >Dekwen Audio Battle</a
             >
           </div>
 

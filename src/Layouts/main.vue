@@ -1,20 +1,15 @@
 <script setup></script>
 <template>
-  <div class="bg font-Kanit">
+  <div class="font-Kanit">
     <RouterView />
   </div>
 </template>
 
 <style>
-.bg {
-  background-image: url("src\assets\Background.jpg");
-  position: fixed;
-  /* background-image: ("src\assets\Background.jpg"); */
-
-  width: 100%;
-  height: 100%;
-
+body {
+  background-image: url("D:\programmer\test\dekwen\dekwen_audio_rapbattle\src\assets\Background.jpg");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>

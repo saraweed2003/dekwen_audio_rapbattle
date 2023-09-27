@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-black">
+  <div class="min-h-screen flex items-center justify-center bg-black/80">
     <div class="text-[50px] text-white">Back office</div>
     <div class="flex items-center text-center text-blue-500">
       <h1 class="ml-[10px] text-[16px]">

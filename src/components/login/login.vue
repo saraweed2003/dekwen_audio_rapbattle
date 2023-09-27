@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-black">
-    <div class="bg-gray-800 p-[30px] rounded shadow-md">
+  <div class="min-h-screen flex items-center justify-center bg-black/80">
+    <div class="bg-black/90 p-[30px] rounded-lg shadow-md">
       <h1 class="text-[30px] font-semibold text-white text-center mb-4">
         LOGIN
       </h1>
@@ -49,5 +49,5 @@ const login = () => {
 </script>
 
 <style>
-/* Tailwind CSS classes and custom styles can be added here */
+
 </style>

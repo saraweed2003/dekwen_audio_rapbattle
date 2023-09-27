@@ -1,8 +1,8 @@
 <template>
   <div
-    class="min-h-screen p-[10px] bg-black flex items-center justify-center font-Kanit"
+    class="min-h-screen p-[10px] bg-black/80 flex items-center justify-center font-Kanit"
   >
-    <div class="items-center justify-center bg-gray-900 rounded">
+    <div class="items-center justify-center bg-black/80 rounded-lg">
       <!-- <p>
         1. ดาวน์โหลด Beat ได้ที่นี่
         <a href="http://www.dekwen.beat.com" class="text-sky-300"
