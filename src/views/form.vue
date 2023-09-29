@@ -218,7 +218,17 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, computed } from "vue";
+import { useStore } from "vuex";
+
+const store = useStore();
+
+onMounted(async () => {
+  await store.dispatch("fetchForm");
+});
+
+const forms = computed(() => store.getters.getForm);
+console.log("form data", forms);
 
 const fileInput = ref(null);
 const selectedImage = ref("");
