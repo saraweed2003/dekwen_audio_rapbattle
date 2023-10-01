@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.5.1",
-    "vue": "^3.3.4",
+    "gsap": "^3.12.2",
+    "vue": "^3.2.36",
     "vue-router": "^4.2.4",
+    "vue3-datepicker": "^0.4.0",
     "vuex": "^4.1.0"
   },
   "devDependencies": {

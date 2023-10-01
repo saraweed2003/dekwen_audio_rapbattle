@@ -80,15 +80,31 @@
                 />
               </div>
 
-              <div class="md:col-span-2">
+              <div v-if="showDatePicker" class="md:col-span-2">
                 <label for="birthday" class="text-white">Birthday</label>
+
                 <input
                   type="date"
                   class="h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
-                  value=""
-                  placeholder=""
-                  required
+                  v-model="selectedDate"
+                  @change="calculateAge"
                 />
+              </div>
+
+              <div v-else class="md:col-span-2">
+                <label for="birthday" class="text-white">Birthday</label>
+
+                <div
+                  class="flex items-center h-10 border mt-1 rounded px-[10px] w-full bg-gray-50"
+                >
+                  <p>อายุของคุณคือ : {{ age }} ปี</p>
+                  <button
+                    @click="showDatePicker = true"
+                    class="pl-[10px] text-gray-400"
+                  >
+                    แก้ไข
+                  </button>
+                </div>
               </div>
 
               <div class="md:col-span-3">
@@ -203,6 +219,7 @@
               <div class="md:col-span-5 text-right">
                 <div class="inline-flex items-end">
                   <button
+                    @click="submitForm"
                     class="bg-black border border-white text-white hover:bg-white hover:text-black font-bold py-2 px-4 rounded"
                   >
                     Submit
@@ -215,10 +232,17 @@
       </div>
     </div>
   </div>
+
+  <checkForm
+    v-if="status === 1"
+    @cancel="closeModalConfirm"
+    @confirm="confirmForm"
+  />
+  <loading v-if="isLoading" />
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
@@ -230,6 +254,7 @@ onMounted(async () => {
 const forms = computed(() => store.getters.getForm);
 console.log("form data", forms);
 
+// ------------------------------ Upload Image file
 const fileInput = ref(null);
 const selectedImage = ref("");
 const modalOpen = ref(false);
@@ -253,6 +278,7 @@ const closeModal = () => {
   modalOpen.value = false;
 };
 
+// ------------------------------ Upload Audio file
 const audioInput = ref(null);
 const selectedAudio = ref("");
 const audioModalOpen = ref(false);
@@ -274,6 +300,62 @@ const openAudioModal = () => {
 
 const closeAudioModal = () => {
   audioModalOpen.value = false;
+};
+
+const showDatePicker = ref(true);
+const selectedDate = ref("");
+const age = ref(null);
+
+const calculateAge = () => {
+  if (selectedDate.value) {
+    const birthDate = new Date(selectedDate.value);
+    const currentDate = new Date();
+    const ageDiff = currentDate - birthDate;
+    const ageDate = new Date(ageDiff);
+    age.value = Math.abs(ageDate.getUTCFullYear() - 1970);
+    showDatePicker.value = false;
+  }
+};
+
+watch(selectedDate, calculateAge);
+
+//----------------------- Modal -----------------------------
+import checkForm from "../components/modals/checkForm.vue";
+const status = ref(0);
+
+const openConfirm = () => {
+  status.value = 1;
+};
+
+const closeModalConfirm = () => {
+  status.value = 0;
+  emits("close");
+};
+
+const emits = defineEmits(["close"]);
+
+import loading from "../components/loading.vue";
+const isLoading = ref(false);
+//----------------------- Modal -----------------------------
+
+const submitForm = () => {
+  isLoading.value = true;
+  status.value = 10;
+
+  setTimeout(() => {
+    isLoading.value = false;
+    openConfirm();
+  }, 1000);
+};
+
+const confirmForm = () => {
+  isLoading.value = true;
+  status.value = 10;
+
+  setTimeout(() => {
+    isLoading.value = false;
+    closeModalConfirm();
+  }, 1000);
 };
 </script>
 
